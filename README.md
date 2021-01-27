@@ -24,8 +24,12 @@
 - Week 13 - CA Submission & Demo - 50%
 
 ## Week 1 - Introduction to the course. Introduction to steering behaviours
+
+## Lab
+- No lab this week
+
+## Lecture
 - [Introduction slides](https://drive.google.com/file/d/1Egwa8jgpLUpQeNJcZ8RuU0Jrt-g65BjU/view?usp=sharing)
 - [Steering Behaviours Slides (a bit out of date)](https://drive.google.com/file/d/1nQeVLqhNY1JvAZQK_BgMxUoVr7w1VPUE/view?usp=sharing)
 - [Craig Reynolds original paper](https://www.red3d.com/cwr/papers/1999/gdc99steer.pdf)
 - [Steering behaviours in Java](https://www.red3d.com/cwr/steer/)
-
