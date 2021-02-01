@@ -14,7 +14,7 @@
 * Twitter: [@skooter500](http://twitter.com/skooter500)
 * [My website & other ways to contact me](http://bryanduggan.org)
 
-## Last years course
+## Previous years courses
 - [2019-2020](https://github.com/skooter500/GE2-2019-2020)
 - [2018-2019](https://github.com/skooter500/GE2-2018-2019)
 	
