@@ -23,6 +23,7 @@ public class BigBoid : MonoBehaviour
     public Vector3 arriveTarget;
     public float slowingDistance = 10;
 
+    Path path = new Path();
 
     public void OnDrawGizmos()
     {
@@ -55,7 +56,7 @@ public class BigBoid : MonoBehaviour
         Vector3 desired = toTarget.normalized * maxSpeed;
 
         return (desired - velocity);
-    } 
+    }   
 
     public Vector3 Arrive(Vector3 target)
     {
@@ -75,7 +76,10 @@ public class BigBoid : MonoBehaviour
         {
             if (seekTargetTransform != null)
             {
-                seekTarget = seekTargetTransform.position;
+                for (int i = 0; i < path.wayPoints.Count; i ++)
+                {
+                    seekTarget = path.wayPoints[i];
+                }
             }
             f += Seek(seekTarget);
         }
