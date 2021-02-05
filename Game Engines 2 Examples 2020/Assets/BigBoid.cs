@@ -35,6 +35,22 @@ public class BigBoid : MonoBehaviour
     public bool playerSteeringEnabled = false;
     public float steeringForce = 100;
 
+    public bool pursueEnabled = false;
+    public BigBoid pursueTarget;
+
+    public Vector3 pursueTargetPos;
+
+    public Vector3 Pursue(BigBoid pursueTarget)
+    {
+        float dist = Vector3.Distance(pursueTarget.transform.position, transform.position);
+
+        float time = dist / maxSpeed;
+
+        pursueTargetPos = pursueTarget.transform.position + pursueTarget.velocity * time;
+
+        return Seek(pursueTargetPos);
+    }
+
 
     public void OnDrawGizmos()
     {
@@ -53,6 +69,12 @@ public class BigBoid : MonoBehaviour
             Gizmos.DrawWireSphere(arriveTargetTransform.position, slowingDistance);
         }
 
+        if (pursueEnabled)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(transform.position, pursueTargetPos);
+        }
+
     }
 
     // Start is called before the first frame update
@@ -66,7 +88,12 @@ public class BigBoid : MonoBehaviour
         Vector3 force = Vector3.zero;
 
         force += Input.GetAxis("Vertical") * transform.forward * steeringForce;
-        force += Input.GetAxis("Horizontal") * transform.right * steeringForce;
+
+        Vector3 projectedRight = transform.right;
+        projectedRight.y = 0;
+        projectedRight.Normalize();
+
+        force += Input.GetAxis("Horizontal") * projectedRight * steeringForce * 0.2f;
 
         return force;
     }
@@ -135,7 +162,12 @@ public class BigBoid : MonoBehaviour
 
         if (playerSteeringEnabled)
         {
-            return PlayerSteering();
+            f += PlayerSteering();
+        }
+
+        if (pursueEnabled)
+        {
+            f += Pursue(pursueTarget);
         }
 
         return f;
