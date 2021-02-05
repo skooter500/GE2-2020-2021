@@ -24,6 +24,7 @@ public class BigBoid : MonoBehaviour
     public float slowingDistance = 10;
 
 
+
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
@@ -91,6 +92,7 @@ public class BigBoid : MonoBehaviour
 
         return f;
     }
+
 
     // Update is called once per frame
     void Update()
