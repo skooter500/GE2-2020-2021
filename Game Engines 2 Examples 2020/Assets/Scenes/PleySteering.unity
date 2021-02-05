@@ -766,9 +766,9 @@ MonoBehaviour:
   arriveTarget: {x: 0, y: 0, z: 0}
   slowingDistance: 16
   path: {fileID: 947367760}
-  pathFollowingEnabled: 1
+  pathFollowingEnabled: 0
   waypointDistance: 3
   banking: 0.5
   damping: 0.1
-  playerSteeringEnabled: 0
+  playerSteeringEnabled: 1
   steeringForce: 100
