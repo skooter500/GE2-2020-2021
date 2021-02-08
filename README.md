@@ -28,6 +28,18 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 3
+
+## Lab
+
+Update your fork of the course repo to get the Pursue code we wrote in the class on Friday.
+
+Create a new scene and make this predator prey simulation. The prey will follow a path until the predator comes into range. When the predator is is range the prey will attack the predator by shooting at it. It only shoots at the predator if it is inside the field of view. The predator will get close to the prey, but will flee from the prey if the prey attacks it. You can use colliders and then disable and enable certain behaviours to implement the simulation.
+
+[![YouTube](http://img.youtube.com/vi/SqThPN_ogJE/0.jpg)](https://www.youtube.com/watch?v=SqThPN_ogJE)
+
+To draw the "Lazers" you can use Debug.DrawLine from Update or you could use a LineRenderer
+
 ## Week 2 - Path Following, Flee, Pursue & Evade, Banking
 - [Video of the class about Player Steering & Pursue](https://web.microsoftstream.com/video/d8be0d36-d9ab-4981-ba33-8d4e20697150?list=studio)
 
