@@ -19,6 +19,17 @@ public class Boid : MonoBehaviour
     public float maxSpeed = 5.0f;
     public float maxForce = 10.0f;
 
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(transform.position, transform.position + velocity);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, transform.position + acceleration);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + force * 10);
+    }
 
     // Use this for initialization
     void Start()

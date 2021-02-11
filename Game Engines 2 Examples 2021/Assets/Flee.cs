@@ -1,10 +1,8 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
-public class Seek : SteeringBehaviour
+public class Flee : SteeringBehaviour
 {
     public GameObject targetGameObject = null;
     public Vector3 target = Vector3.zero;
@@ -21,10 +19,10 @@ public class Seek : SteeringBehaviour
             Gizmos.DrawLine(transform.position, target);
         }
     }
-    
+
     public override Vector3 Calculate()
     {
-        return boid.SeekForce(target);    
+        return - boid.SeekForce(target);
     }
 
     public void Update()
