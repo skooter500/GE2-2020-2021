@@ -30,6 +30,9 @@
 
 ## Week 3
 
+## Lectures
+- [Video of Thursdays class about SOLID principals & refactoring](https://web.microsoftstream.com/video/20e70018-e96c-4537-9182-060beefd57a7)
+
 ## Lab
 
 You could use the lab class to work on your assignment - get 3D models imported and flying around or here is an exercise you can do that uses the pursue behaviour we worked on last week: 
