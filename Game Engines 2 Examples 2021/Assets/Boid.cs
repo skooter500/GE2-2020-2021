@@ -51,21 +51,28 @@ public class Boid : MonoBehaviour
         return desired - velocity;
     }
 
-    public Vector3 ArriveForce(Vector3 target, float slowingDistance = 15.0f)
+    public Vector3 ArriveForce(Vector3 target, float slowingDistance = 3.0f)
     {
         Vector3 toTarget = target - transform.position;
 
         float distance = toTarget.magnitude;
-        if (distance < 0.1f)
+        if (distance > 0)
+        {
+            //because Deceleration is enumerated as an int, this value is required
+            //to provide fine tweaking of the deceleration..
+            float  decelerationTweaker = 0.3f;                
+
+            float ramped = maxSpeed * (distance / slowingDistance * decelerationTweaker);
+
+            float clamped = Mathf.Min(ramped, maxSpeed);
+            Vector3 desired = clamped * (toTarget / distance);
+
+            return desired - velocity;
+        }
+        else
         {
             return Vector3.zero;
         }
-        float ramped = maxSpeed * (distance / slowingDistance);
-
-        float clamped = Mathf.Min(ramped, maxSpeed);
-        Vector3 desired = clamped * (toTarget / distance);
-
-        return desired - velocity;
     }
     
 
