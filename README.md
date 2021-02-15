@@ -1,4 +1,4 @@
-# Game Engines 2 2019-2020
+# Game Engines 2 2020-2021
 
 [![Video](http://img.youtube.com/vi/NMDupdv85FE/0.jpg)](http://www.youtube.com/watch?NMDupdv85FE)
 
@@ -28,10 +28,15 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 4
+
+- Try [this lab test from 2018](https://github.com/skooter500/GE2-Labtest1-2018) about Offset Pursue. No need to clone the repo as it has the solution in it! 
+
 ## Week 3
 
 ## Lectures
 - [Video of Thursdays class about SOLID principals & refactoring](https://web.microsoftstream.com/video/20e70018-e96c-4537-9182-060beefd57a7)
+- [Video of Fridays class about Offset Pursue](https://web.microsoftstream.com/video/c14c7cfd-8fa9-407c-be30-e5587f88f487?list=studio)
 
 ## Lab
 
