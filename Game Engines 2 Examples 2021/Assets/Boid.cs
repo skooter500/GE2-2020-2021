@@ -57,16 +57,7 @@ public class Boid : MonoBehaviour
 
         float distance = toTarget.magnitude;
 
-        if (distance > slowingDistance)
-        {
-            return SeekForce(target);
-        }
-        else
-        {
-            Vector3 desired = toTarget.normalized * maxSpeed * (distance / slowingDistance);
-            return desired - velocity;
-        }
-        /*
+        
         if (distance > 0)
         {        
             float ramped = maxSpeed * (distance / slowingDistance);
@@ -79,8 +70,7 @@ public class Boid : MonoBehaviour
         else
         {
             return Vector3.zero;
-        }
-        */
+        }        
     }
     
 
