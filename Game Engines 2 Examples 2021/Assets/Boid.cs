@@ -89,14 +89,7 @@ public class Boid : MonoBehaviour
         {
             if (b.isActiveAndEnabled)
             {
-                force += b.Calculate() * b.weight;
-
-                float f = force.magnitude;
-                if (f >= maxForce)
-                {
-                    force = Vector3.ClampMagnitude(force, maxForce);
-                    break;
-                }               
+                force += b.Calculate() * b.weight;                               
             }
         }
 
