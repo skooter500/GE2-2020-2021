@@ -21,7 +21,7 @@ public class BigBoid : MonoBehaviour
     public bool arriveEnabled = false;
     public Transform arriveTargetTransform;
     public Vector3 arriveTarget;
-    public float slowingDistance = 10;
+    public float slowingDistance = 80;
 
     public Path path;
     public bool pathFollowingEnabled = false;

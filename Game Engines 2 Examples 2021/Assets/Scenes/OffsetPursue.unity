@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   next: 0
-  looped: 1
+  looped: 0
 --- !u!4 &240181464
 Transform:
   m_ObjectHideFlags: 0
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69145582722e16f47a9cb96b4fbca4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 200
+  weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   path: {fileID: 240181463}
@@ -920,7 +920,7 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  damping: 0.01
+  damping: 0.1
   banking: 0.5
   maxSpeed: 10
   maxForce: 10

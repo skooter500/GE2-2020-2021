@@ -51,18 +51,16 @@ public class Boid : MonoBehaviour
         return desired - velocity;
     }
 
-    public Vector3 ArriveForce(Vector3 target, float slowingDistance = 3.0f)
+    public Vector3 ArriveForce(Vector3 target, float slowingDistance = 40.0f)
     {
         Vector3 toTarget = target - transform.position;
 
         float distance = toTarget.magnitude;
-        if (distance > 0)
-        {
-            //because Deceleration is enumerated as an int, this value is required
-            //to provide fine tweaking of the deceleration..
-            float  decelerationTweaker = 0.3f;                
 
-            float ramped = maxSpeed * (distance / slowingDistance * decelerationTweaker);
+        
+        if (distance > 0)
+        {        
+            float ramped = maxSpeed * (distance / slowingDistance);
 
             float clamped = Mathf.Min(ramped, maxSpeed);
             Vector3 desired = clamped * (toTarget / distance);
@@ -72,7 +70,7 @@ public class Boid : MonoBehaviour
         else
         {
             return Vector3.zero;
-        }
+        }        
     }
     
 
@@ -103,13 +101,12 @@ public class Boid : MonoBehaviour
     void Update()
     {
         force = Calculate();
-        Vector3 newAcceleration = force / mass;
-        acceleration = Vector3.Lerp(acceleration, newAcceleration, Time.deltaTime);
+        acceleration = force / mass;
         velocity += acceleration * Time.deltaTime;
 
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
         
-        if (velocity.magnitude > float.Epsilon)
+        if (velocity.magnitude > 0)
         {
             Vector3 tempUp = Vector3.Lerp(transform.up, Vector3.up + (acceleration * banking), Time.deltaTime * 3.0f);
             transform.LookAt(transform.position + velocity, tempUp);
