@@ -30,6 +30,11 @@
 
 ## Week 4
 
+### Lecture
+- [Thursday](https://web.microsoftstream.com/video/b6945686-bc22-4d0b-b071-abe4c63130e1?list=studio)
+
+### Lab
+
 - Try [this lab test from 2018](https://github.com/skooter500/GE2-Labtest1-2018) about Offset Pursue. No need to clone the repo as it has the solution in it! 
 
 ## Week 3
