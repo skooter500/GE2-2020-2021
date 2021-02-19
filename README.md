@@ -15,7 +15,7 @@
 - [A spotify playlist of music to listen to while coding](https://open.spotify.com/user/1155805407/playlist/5NYFsIFTgNOI93hONLbqNI)
 
 ## Contact me
-* Email: bryan.duggan@dit.ie
+* Email: bryan.duggan@tudublin.ie
 * Twitter: [@skooter500](http://twitter.com/skooter500)
 * [My website & other ways to contact me](http://bryanduggan.org)
 
@@ -31,7 +31,8 @@
 ## Week 4
 
 ### Lecture
-- [Thursday](https://web.microsoftstream.com/video/b6945686-bc22-4d0b-b071-abe4c63130e1?list=studio)
+- [WTPRS & Wander](https://web.microsoftstream.com/video/b6945686-bc22-4d0b-b071-abe4c63130e1?list=studio)
+- [Unity Input System (presented by Tadhg O Rourke)](https://web.microsoftstream.com/video/b2abfc9b-4358-4e83-a8ad-e5242bef3240)
 
 ### Lab
 
