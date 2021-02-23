@@ -214,14 +214,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039729033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69145582722e16f47a9cb96b4fbca4bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 266135fc6277f9c4c9d4a810b90df4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 200
+  weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  path: {fileID: 0}
-  waypointDistance: 5
+  distance: 20
+  radius: 10
+  jitter: 100
+  target: {x: 0, y: 0, z: 0}
+  worldTarget: {x: 0, y: 0, z: 0}
 --- !u!65 &1039729035
 BoxCollider:
   m_ObjectHideFlags: 0

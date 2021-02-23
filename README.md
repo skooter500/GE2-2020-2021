@@ -28,6 +28,15 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 5
+
+### Lab
+A few ideas for todays lab!
+1. Clone [this repo](https://github.com/skooter500/ECS2020) and check out my ECS experiments. If you feel like a challenge, fix the bug in the Life scene. In this scene I am attempting to program a 3D cellular automata (like the Game of Life) in 3D
+2. [Try this lab test](https://github.com/skooter500/GE2-Lab-Test-2019)
+3. Work on your assignment. The first deliverable is due next week
+
+
 ## Week 4
 
 ### Lecture
