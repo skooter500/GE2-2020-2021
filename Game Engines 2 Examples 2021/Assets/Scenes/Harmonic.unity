@@ -225,7 +225,7 @@ MonoBehaviour:
   theta: 0
   amplitude: 80
   distance: 5
-  axis: 1
+  axis: 0
 --- !u!65 &1039729035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -319,8 +319,8 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   damping: 0.01
-  banking: 0.5
-  maxSpeed: 10
+  banking: 0.1
+  maxSpeed: 5
   maxForce: 10
 --- !u!1 &1382551197
 GameObject:
