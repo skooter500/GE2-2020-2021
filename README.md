@@ -28,7 +28,13 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
-## Week 4
+## Week 5 - Harmonic & NoiseWander
+### Lecture
+- [Video of the class on Thursday](https://web.microsoftstream.com/video/d27e6703-6350-4fa4-8345-532837de2cdb)
+- [Video of the class on Thursday](https://web.microsoftstream.com/video/bb01cfa3-cdcb-4036-b30c-4db2c891a0e0)
+- [A playlist of my creatures]()
+
+## Week 4 - WTPRS, Wander & the new Unity Input System
 
 ### Lecture
 - [WTPRS & Wander](https://web.microsoftstream.com/video/b6945686-bc22-4d0b-b071-abe4c63130e1?list=studio)
