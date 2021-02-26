@@ -34,7 +34,13 @@
 - [Video of the class on Thursday](https://web.microsoftstream.com/video/bb01cfa3-cdcb-4036-b30c-4db2c891a0e0)
 - [A playlist of my creatures]()
 
-## Week 4 - WTPRS, Wander & the new Unity Input System
+### Lab
+A few ideas for todays lab!
+1. Clone [this repo](https://github.com/skooter500/ECS2020) and check out my ECS experiments. If you feel like a challenge, fix the bug in the Life scene. In this scene I am attempting to program a 3D cellular automata (like the Game of Life) in 3D
+2. [Try this lab test](https://github.com/skooter500/GE2-Lab-Test-2019)
+3. Work on your assignment. The first deliverable is due next week
+
+## Week 4
 
 ### Lecture
 - [WTPRS & Wander](https://web.microsoftstream.com/video/b6945686-bc22-4d0b-b071-abe4c63130e1?list=studio)
