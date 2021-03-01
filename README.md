@@ -28,6 +28,11 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 6 - Finite State Machines
+
+### Lab
+- [Submit the github repo for your assignment](https://docs.google.com/forms/d/e/1FAIpQLSf8XGjtZjvkVs7NTt9gOq3H2ls7VryCiwH2uVhHWTWxxycv1g/viewform)
+
 ## Week 5 - Harmonic & NoiseWander
 ### Lecture
 - [Video of the class on Thursday](https://web.microsoftstream.com/video/d27e6703-6350-4fa4-8345-532837de2cdb)
