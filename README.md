@@ -32,6 +32,8 @@
 
 ### Lab
 - [Submit the github repo for your assignment](https://docs.google.com/forms/d/e/1FAIpQLSf8XGjtZjvkVs7NTt9gOq3H2ls7VryCiwH2uVhHWTWxxycv1g/viewform)
+- Make a behaviour called Constrain that keeps a boid inside a sphere of interest. If the boid goes outside the sphere, generate a force to push the boid back towards the centre of the sphere.
+- Make some creatures with NoiseWander, Harmonic, Constrain and the SpineAnimator 
 
 ## Week 5 - Harmonic & NoiseWander
 ### Lecture
