@@ -38,7 +38,7 @@ public class DefendState : State
     public override void Think()
     {
         GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position, owner.transform.rotation);
-        owner.GetComponent<Fighter>().playerStats.ammo --;
+        owner.GetComponent<Fighter>().ammo --;
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
             owner.transform.position) > 30)
@@ -60,8 +60,9 @@ public class PreyController : MonoBehaviour
     {
         if (c.tag == "Bullet")
         {
-            GetComponent<Fighter>().playerStats.health --;
+            GetComponent<Fighter>().health --;
             Destroy(c.gameObject);
+            GetComponent<StateMachine>().ChangeState(new DefendState());    
         }
     }
 

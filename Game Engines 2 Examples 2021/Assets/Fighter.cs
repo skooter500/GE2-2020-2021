@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
-    public PlayerStats playerStats;
+    public float health = 10;
+    public float ammo = 10;
+    
     public GameObject bullet;
     public GameObject enemy;
     public TMPro.TextMeshPro text;
 
+    void Start()
+    {
+    }
+
     void Update()
     {        
-        text.text = "Health: " + playerStats.health + "\n" + 
+        text.text = "Health: " + health + "\n" + 
             
-            "Ammo: " + playerStats.ammo + "\n" +
+            "Ammo: " + ammo + "\n" +
             "State: " + GetComponent<StateMachine>().currentState.GetType().Name + "\n" +
             "Global State: " + GetComponent<StateMachine>().globalState.GetType().Name;
 
