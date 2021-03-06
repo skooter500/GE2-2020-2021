@@ -38,7 +38,7 @@ public class DefendState : State
     public override void Think()
     {
         GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position, owner.transform.rotation);
-        
+        owner.GetComponent<Fighter>().playerStats.ammo --;
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
             owner.transform.position) > 30)

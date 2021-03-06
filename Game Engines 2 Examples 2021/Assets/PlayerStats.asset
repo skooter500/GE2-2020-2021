@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   health: 10
-  ammo: 10
+  ammo: 0

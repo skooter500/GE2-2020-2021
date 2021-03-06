@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 156987129}
   - component: {fileID: 156987124}
   - component: {fileID: 156987135}
+  - component: {fileID: 156987128}
   m_Layer: 0
   m_Name: predator
   m_TagString: Untagged
@@ -253,7 +254,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156987123}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -307,6 +308,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156987123}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &156987128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156987123}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b986f57f15ba194aa78d9403fe41cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  targetGameObject: {fileID: 0}
 --- !u!114 &156987129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +966,7 @@ GameObject:
   - component: {fileID: 1206003792}
   - component: {fileID: 1206003800}
   - component: {fileID: 1206003801}
+  - component: {fileID: 1206003802}
   m_Layer: 0
   m_Name: prey
   m_TagString: Untagged
@@ -1125,6 +1145,24 @@ MonoBehaviour:
   bullet: {fileID: 2501775711163047438, guid: a06b093247723e24ba553c7cae351391, type: 3}
   enemy: {fileID: 156987123}
   text: {fileID: 488812725}
+--- !u!114 &1206003802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206003791}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b986f57f15ba194aa78d9403fe41cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  targetGameObject: {fileID: 0}
 --- !u!1 &1283289257
 GameObject:
   m_ObjectHideFlags: 0

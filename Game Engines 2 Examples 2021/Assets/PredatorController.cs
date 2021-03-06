@@ -13,7 +13,7 @@ public class AttackState : State
     public override void Think()
     {
         GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position, owner.transform.rotation);
-        
+        owner.GetComponent<Fighter>().playerStats.ammo --;
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
             owner.transform.position) < 10)
@@ -56,12 +56,23 @@ public class Alive:State
 {
     public override void Think()
     {
+
+        if (owner.GetComponent<Fighter>().playerStats.health <= 5)
+        {
+            owner.ChangeState(new FindAmmo());
+            return;
+        }
         if (owner.GetComponent<Fighter>().playerStats.health <= 0)
         {
             owner.ChangeState(new Dead());
+            return;
         }
 
-
+        if (owner.GetComponent<Fighter>().playerStats.ammo <= 0)
+        {
+            owner.ChangeState(new FindAmmo());
+            return;
+        }
     }
 }
 
@@ -102,8 +113,9 @@ public class FindAmmo:State
         if (ammo == null)
         {
             owner.ChangeState(new FindAmmo());
+            return;
         }
-        if (Vector3.Distance(owner.transform.position, ammo.transform.position) < 5)
+        if (Vector3.Distance(owner.transform.position, ammo.position) < 5)
         {
             owner.GetComponent<Fighter>().playerStats.ammo += 10;
             owner.RevertToPreviousState();
@@ -144,6 +156,7 @@ public class FindHealth:State
         if (health == null)
         {
             owner.ChangeState(new FindAmmo());
+            return;
         }
         if (Vector3.Distance(owner.transform.position, health.transform.position) < 5)
         {
