@@ -72,5 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 2429665175899131903, guid: 55a03fbff135bb740a9fd89fbfbc55ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a03fbff135bb740a9fd89fbfbc55ba, type: 3}

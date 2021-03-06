@@ -89,5 +89,11 @@ public class StateMachine : MonoBehaviour {
             
             yield return new WaitForSeconds(1.0f / (float)updatesPerSecond);
         }
-    }    
+    }
+
+    internal void SetGlobalState(Alive alive)
+    {
+        globalState = alive;
+        alive.owner = this;
+    }
 }
