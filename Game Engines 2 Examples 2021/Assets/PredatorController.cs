@@ -12,9 +12,12 @@ public class AttackState : State
 
     public override void Think()
     {
-        GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);
-        
-        owner.GetComponent<Fighter>().ammo --;
+        Vector3 toEnemy = owner.GetComponent<Fighter>().enemy.transform.position - owner.transform.position; 
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 45 && toEnemy.magnitude < 20)
+        {
+            GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);
+            owner.GetComponent<Fighter>().ammo --;
+        }        
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
             owner.transform.position) < 10)
@@ -60,7 +63,9 @@ public class Alive:State
 
         if (owner.GetComponent<Fighter>().health <= 0)
         {
-            owner.ChangeState(new Dead());
+            Dead dead = new Dead();
+            owner.ChangeState(dead);
+            owner.SetGlobalState(dead);
             return;
         }
 
@@ -82,8 +87,11 @@ public class Dead:State
 {
     public override void Enter()
     {
-        owner.GetComponent<Pursue>().enabled = false;
-        owner.GetComponent<Flee>().enabled = false;
+        SteeringBehaviour[] sbs = owner.GetComponent<Boid>().GetComponents<SteeringBehaviour>();
+        foreach(SteeringBehaviour sb in sbs)
+        {
+            sb.enabled = false;
+        }
         owner.GetComponent<StateMachine>().enabled = false;        
     }         
 }
@@ -154,10 +162,10 @@ public class FindHealth:State
 
     public override void Think()
     {
-        // If the other guy already took tghe ammo
+        // If the other guy already took the health
         if (health == null)
         {
-            owner.ChangeState(new FindAmmo());
+            owner.ChangeState(new FindHealth());
             return;
         }
         if (Vector3.Distance(owner.transform.position, health.transform.position) < 5)
@@ -181,7 +189,10 @@ public class PredatorController : MonoBehaviour
     {
         if (c.tag == "Bullet")
         {
-            GetComponent<Fighter>().health --;
+            if (GetComponent<Fighter>().health > 0)
+            {
+                GetComponent<Fighter>().health --;
+            }
             Destroy(c.gameObject);
         }
     }

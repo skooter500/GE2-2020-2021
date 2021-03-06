@@ -95,9 +95,17 @@ public class StateMachine : MonoBehaviour {
         }
     }
 
-    internal void SetGlobalState(Alive alive)
+    public void SetGlobalState(State state)
     {
-        globalState = alive;
-        alive.owner = this;
+        if (globalState != null)
+        {
+            globalState.Exit();
+        }
+        globalState = state;
+        if (globalState != null)
+        {
+            globalState.owner = this;
+            globalState.Enter();
+        }        
     }
 }

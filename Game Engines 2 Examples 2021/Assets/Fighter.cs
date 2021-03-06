@@ -16,7 +16,7 @@ public class Fighter : MonoBehaviour
     }
 
     void Update()
-    {        
+    {                
         text.text = "Health: " + health + "\n" + 
             
             "Ammo: " + ammo + "\n" +

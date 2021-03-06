@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 class PatrolState : State
 {
     public override void Enter()
@@ -37,8 +35,12 @@ public class DefendState : State
 
     public override void Think()
     {
-        GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position, owner.transform.rotation);
-        owner.GetComponent<Fighter>().ammo --;
+        Vector3 toEnemy = owner.GetComponent<Fighter>().enemy.transform.position - owner.transform.position; 
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 45 && toEnemy.magnitude < 20)
+        {
+            GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);
+            owner.GetComponent<Fighter>().ammo --;        
+        }
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
             owner.transform.position) > 30)
@@ -60,9 +62,15 @@ public class PreyController : MonoBehaviour
     {
         if (c.tag == "Bullet")
         {
-            GetComponent<Fighter>().health --;
+            if (GetComponent<Fighter>().health > 0)
+            {            
+                GetComponent<Fighter>().health --;
+            }
             Destroy(c.gameObject);
-            GetComponent<StateMachine>().ChangeState(new DefendState());    
+            if (GetComponent<StateMachine>().currentState.GetType() != typeof(Dead))
+            {
+                GetComponent<StateMachine>().ChangeState(new DefendState());    
+            }
         }
     }
 

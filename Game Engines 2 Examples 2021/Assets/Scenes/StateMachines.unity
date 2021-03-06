@@ -159,8 +159,8 @@ Camera:
   m_GameObject: {fileID: 15965263}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b986f57f15ba194aa78d9403fe41cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 3
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -423,7 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c905c8a36dfb5f04c874e80b2fad5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 39456129a8d9d56478b808e2bf2821c9, type: 2}
+  health: 10
+  ammo: 10
   bullet: {fileID: 2429665175899131903, guid: 55a03fbff135bb740a9fd89fbfbc55ba, type: 3}
   enemy: {fileID: 1206003791}
   text: {fileID: 1205370976}
@@ -558,7 +559,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 11.141967, w: 0}
+  m_margin: {x: 0, y: 0, z: 10.850876, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -615,7 +616,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488812724}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.02}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1206003796}
@@ -623,8 +624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.71, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 17.5, y: -0}
+  m_SizeDelta: {x: 30, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &644147281
 GameObject:
@@ -805,7 +806,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205370974}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.43}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 156987134}
@@ -813,8 +814,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.18, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 17.3, y: 0}
+  m_SizeDelta: {x: 30, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1205370976
 MonoBehaviour:
@@ -1141,7 +1142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c905c8a36dfb5f04c874e80b2fad5d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 39456129a8d9d56478b808e2bf2821c9, type: 2}
+  health: 10
+  ammo: 10
   bullet: {fileID: 2501775711163047438, guid: a06b093247723e24ba553c7cae351391, type: 3}
   enemy: {fileID: 156987123}
   text: {fileID: 488812725}
@@ -1157,7 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b986f57f15ba194aa78d9403fe41cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 3
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
