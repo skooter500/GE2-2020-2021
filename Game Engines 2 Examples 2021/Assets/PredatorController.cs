@@ -13,7 +13,7 @@ public class AttackState : State
     public override void Think()
     {
         Vector3 toEnemy = owner.GetComponent<Fighter>().enemy.transform.position - owner.transform.position; 
-        if (Vector3.Angle(owner.transform.forward, toEnemy) < 45 && toEnemy.magnitude < 20)
+        if (Vector3.Angle(owner.transform.forward, toEnemy) < 45 && toEnemy.magnitude < 30)
         {
             GameObject bullet = GameObject.Instantiate(owner.GetComponent<Fighter>().bullet, owner.transform.position + owner.transform.forward * 2, owner.transform.rotation);
             owner.GetComponent<Fighter>().ammo --;
@@ -113,8 +113,8 @@ public class FindAmmo:State
                 }
         }
         ammo = closest;
-        owner.GetComponent<Arrive>().targetGameObject = ammo.gameObject;
-        owner.GetComponent<Arrive>().enabled = true;
+        owner.GetComponent<Seek>().targetGameObject = ammo.gameObject;
+        owner.GetComponent<Seek>().enabled = true;
     }
 
     public override void Think()
@@ -125,7 +125,7 @@ public class FindAmmo:State
             owner.ChangeState(new FindAmmo());
             return;
         }
-        if (Vector3.Distance(owner.transform.position, ammo.position) < 5)
+        if (Vector3.Distance(owner.transform.position, ammo.position) < 1)
         {
             owner.GetComponent<Fighter>().ammo += 10;
             owner.RevertToPreviousState();
@@ -135,7 +135,7 @@ public class FindAmmo:State
 
     public override void Exit()
     {
-        owner.GetComponent<Arrive>().enabled = false;
+        owner.GetComponent<Seek>().enabled = false;
     }
 }
 
@@ -156,8 +156,8 @@ public class FindHealth:State
                 }
         }
         health = closest;
-        owner.GetComponent<Arrive>().targetGameObject = health.gameObject;
-        owner.GetComponent<Arrive>().enabled = true;
+        owner.GetComponent<Seek>().targetGameObject = health.gameObject;
+        owner.GetComponent<Seek>().enabled = true;
     }
 
     public override void Think()
@@ -168,7 +168,7 @@ public class FindHealth:State
             owner.ChangeState(new FindHealth());
             return;
         }
-        if (Vector3.Distance(owner.transform.position, health.transform.position) < 5)
+        if (Vector3.Distance(owner.transform.position, health.transform.position) < 2)
         {
             owner.GetComponent<Fighter>().health += 10;
             owner.RevertToPreviousState();
@@ -178,7 +178,7 @@ public class FindHealth:State
 
     public override void Exit()
     {
-        owner.GetComponent<Arrive>().enabled = false;
+        owner.GetComponent<Seek>().enabled = false;
     }
 }
 
