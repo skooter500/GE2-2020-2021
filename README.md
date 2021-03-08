@@ -1,6 +1,6 @@
 # Game Engines 2 2020-2021
 
-[![Video](http://img.youtube.com/vi/NMDupdv85FE/0.jpg)](http://www.youtube.com/watch?NMDupdv85FE)
+[![Video](http://img.youtube.com/vi/KNymjRyr27A/0.jpg)](http://www.youtube.com/watch?KNymjRyr27A)
 
 ## Teams links for classes:
 - [Tuesday 9am lab](https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzhhZmVhY2MtOWI5Ni00ZjExLTliYmMtZWJiZjhjYTVkYmY5%40thread.v2/0?context=%7b%22Tid%22%3a%22766317cb-e948-4e5f-8cec-dabc8e2fd5da%22%2c%22Oid%22%3a%2261aab78b-a857-4647-9668-83d4cca5de03%22%7d)
