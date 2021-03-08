@@ -33,8 +33,6 @@
 - Learn how to use the state machine design pattern
 - Learn how to draw a FSM diagram
 
-Checkout this video of what you will be making today using the finite state machine:
-
 In this video are the two autonomous agents we programmed in Friday's class with some enhancements and additional states you can make today:
 
 [![YouTube](http://img.youtube.com/vi/R6yzjthBH4U/0.jpg)](https://www.youtube.com/watch?v=R6yzjthBH4U)
@@ -47,7 +45,7 @@ If either agent gets below 2 health, it will go and pickup the nearest health. T
 
 The spawning system keeps 5 health and 5 ammo in the scene at all times.
 
-If either boid gets to 0 health, it goes to the dead state. In dead state, the state machine gets turned off and all the steering behaviours get disabled.
+If either boid gets to 0 health, it goes to the Dead state. In Dead state, the state machine gets turned off and all the steering behaviours get disabled.
 
 The GetAmmo, GetHealth and Alive and Dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine).
 
@@ -59,7 +57,7 @@ To complete the lab:
 - Make an Aive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
 - Modify Attach and Defend to remove ammo when shooting
 
-Finally draw state transition diagrams for both agents
+Finally draw state transition diagrams for both agents.
 
 ## Week 6 - Finite State Machines
 
