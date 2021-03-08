@@ -28,6 +28,31 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 7
+### Learning Outcomes
+- Learn how to use the state machine design pattern
+- Learn how to draw a FSM diagram
+
+Checkout this video of what you will be making today using the finite state machine:
+
+In this video are the two autonomous agents we programmed in Friday's class with some enhancements and additional states:
+
+[![YouTube](http://img.youtube.com/vi/R6yzjthBH4U/0.jpg)](https://www.youtube.com/watch?v=R6yzjthBH4U)
+
+The agent boid goes between Patrol state and Defend state. In Patrol state, the agent will follow it's path. In defend state, it will fire at the green agent until either it runs out of ammuntion or the green agent goes out of range. The green agent will go between it's Attack state, where it will fire at the blue agent or Flee state where it will flee from the attacking blue agent. 
+
+If either agent runs out of ammunition it will go and get the nearest ammunition. These are tagged with "Ammo".
+
+If either agent gets below 2 health, it will go and pickup the nearest health. These are tagged with "Health".
+
+The spawning system keeps 5 health and 5 ammo in the scene at all times.
+
+If either boid gets to 0 or 1 health, it goes to the dead state. In dead state, the state machine gets turned off and all the steering behaviours get disabled.
+
+The ammo, health and live and dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine)
+
+Update your forks of the repo from my master branch and make a branch for your work today. All the above is in a scene called StateMachines.
+
 ## Week 6 - Finite State Machines
 
 ### Lab
@@ -35,10 +60,12 @@
 - Make a behaviour called Constrain that keeps a boid inside a sphere of interest. If the boid goes outside the sphere, generate a force to push the boid back towards the centre of the sphere.
 - Make some creatures with NoiseWander, Harmonic, Constrain and the SpineAnimator 
 
+### Lecture
+
 ## Week 5 - Harmonic & NoiseWander
 ### Lecture
 - [Video of the class on Thursday](https://web.microsoftstream.com/video/d27e6703-6350-4fa4-8345-532837de2cdb)
-- [Video of the class on Thursday](https://web.microsoftstream.com/video/bb01cfa3-cdcb-4036-b30c-4db2c891a0e0)
+- [Video of the class on Friday](https://web.microsoftstream.com/video/bb01cfa3-cdcb-4036-b30c-4db2c891a0e0)
 - [A playlist of my creatures]()
 
 ### Lab
