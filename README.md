@@ -59,6 +59,8 @@ To complete the lab:
 - Make an Aive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
 - Modify Attach and Defend to remove ammo when shooting
 
+Finally draw state transition diagrams for both agents
+
 ## Week 6 - Finite State Machines
 
 ### Lab
