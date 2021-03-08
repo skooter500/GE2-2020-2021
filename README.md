@@ -45,7 +45,7 @@ If either agent gets below 2 health, it will go and pickup the nearest health. T
 
 The spawning system keeps 5 health and 5 ammo in the scene at all times.
 
-If either boid gets to 0 health, it goes to the Dead state. In Dead state, the state machine gets turned off and all the steering behaviours get disabled.
+If either agent gets to 0 health, it goes to the Dead state. In Dead state, the state machine gets turned off and all the steering behaviours get disabled.
 
 The GetAmmo, GetHealth and Alive and Dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine).
 
@@ -55,7 +55,7 @@ To complete the lab:
 
 - Make a GetHealth and GetAmmo state with Enter, Think and Exit methods. When transitioning out of these states, use RevertToPrevious to implement a state blip
 - Make an Aive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
-- Modify Attach and Defend to remove ammo when shooting
+- Modify Attack and Defend to remove ammo when shooting
 
 Finally draw state transition diagrams for both agents.
 
