@@ -32,32 +32,43 @@
 ### Learning Outcomes
 - Learn how to use the state machine design pattern
 - Learn how to draw a FSM diagram
+- Get the ECS examples working
+
+## Part 1
 
 In this video are the two autonomous agents we programmed in Friday's class with some enhancements and additional states you can make today:
 
 [![YouTube](http://img.youtube.com/vi/R6yzjthBH4U/0.jpg)](https://www.youtube.com/watch?v=R6yzjthBH4U)
 
-The blue agent goes between Patrol state and Defend state. In Patrol state, the agent will follow it's path. In defend state, it will fire at the green agent until either it runs out of ammuntion or the green agent goes out of range. The green agent will go between it's Attack state, where it will fire at the blue agent or Flee state where it will flee from the attacking blue agent. 
+The blue agent goes between Patrol and Defend states. In Patrol state, the agent will follow it's path. In defend state, it will fire at the green agent until either it runs out of ammunition or the green agent goes out of range. The green agent will go between it's Attack state, where it will fire at the blue agent or Flee state where it will flee from the attacking blue agent. 
 
-If either agent runs out of ammunition it will go and get the nearest ammunition. These are tagged with "Ammo".
+If an agent runs out of ammunition it will locate and pickup the nearest ammunition. These are tagged with "Ammo".
 
-If either agent gets below 2 health, it will go and pickup the nearest health. These are tagged with "Health".
+If an agent gets below 2 health, it will locate and pickup the nearest health. These are tagged with "Health".
 
 The spawning system keeps 5 health and 5 ammo in the scene at all times.
 
-If either agent gets to 0 health, it goes to the Dead state. In Dead state, the state machine gets turned off and all the steering behaviours get disabled.
-
-The GetAmmo, GetHealth and Alive and Dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine).
+If an agent gets to 0 health, it goes to the Dead state. In Dead state, the state machine gets turned off and all the steering behaviours get disabled.
 
 Update your forks of the repo from my master branch and make a branch for your work today. All the above is in a scene called StateMachines. The states are in the file States.cs.
 
 To complete the lab:
 
-- Make a GetHealth and GetAmmo state with Enter, Think and Exit methods. When transitioning out of these states, use RevertToPrevious to implement a state blip
-- Make an Aive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
-- Modify Attack and Defend to remove ammo when shooting
+- Make an Alive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
+- Make GetHealth, GetAmmo states with Enter, Think and Exit methods. When transitioning out of GetHealth, GetAmmo and use RevertToPrevious to implement these as state blips.
+- Modify Attack and Defend states so that they remove ammo when shooting
 
 Finally draw state transition diagrams for both agents.
+
+## Part 2 - If you have time!
+
+In case you are curious, here is the video of Psytrance Music Visualiser:
+
+https://www.youtube.com/watch?v=KNymjRyr27A
+
+And here is a [blog post](https://bryanduggan.org/2021/03/04/psytrance-spiral-generator/) with some screenshots. It is one of the Entity Component System samples I am putting together for the course. It generates a great variety of beautiful spirals and can be beat tracked to the audio.
+
+You can [check out the repo](http://github.com/skooter500/ECS2020) in advance of this weeks class.
 
 ## Week 6 - Finite State Machines
 
