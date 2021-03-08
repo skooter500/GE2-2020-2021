@@ -56,7 +56,7 @@ To complete the lab:
 
 - Make an Alive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
 - Make this the Global state for each agent
-- Make GetHealth, GetAmmo states with Enter, Think and Exit methods. When transitioning out of GetHealth, GetAmmo and use RevertToPrevious to implement these as state blips.
+- Make GetHealth, GetAmmo states with Enter, Think and Exit methods. When transitioning out of GetHealth and GetAmmo, use RevertToPrevious in order  to implement these as state blips.
 - Modify Attack and Defend states so that they remove ammo when shooting
 - Draw state transition diagrams for both agents.
 
