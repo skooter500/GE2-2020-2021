@@ -55,10 +55,17 @@ Update your forks of the repo from my master branch and make a branch for your w
 To complete the lab:
 
 - Make an Alive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
+- Make this the Global state for each agent
 - Make GetHealth, GetAmmo states with Enter, Think and Exit methods. When transitioning out of GetHealth, GetAmmo and use RevertToPrevious to implement these as state blips.
 - Modify Attack and Defend states so that they remove ammo when shooting
+- Draw state transition diagrams for both agents.
 
-Finally draw state transition diagrams for both agents.
+Other things to try:
+
+- Modify the targeting
+- Try Evade instead of flee
+- Make the agents opportunistic. I.e. An agent will not only seek health or ammo when it gets low, instead if an ammo or health happens to come in range, the agent will try to get it
+- Increase the complexity of the scenario by adding additional states
 
 ## Part 2 - If you have time!
 
