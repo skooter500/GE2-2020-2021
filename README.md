@@ -67,6 +67,8 @@ Finally draw state transition diagrams for both agents.
 - Make some creatures with NoiseWander, Harmonic, Constrain and the SpineAnimator 
 
 ### Lecture
+- [Thursdays' class](https://web.microsoftstream.com/video/f89bdaae-26c9-4e39-9f36-0ec5f108faa5?list=studio)
+- [Friday's class](https://web.microsoftstream.com/video/4426c2dc-eb00-47bb-b869-e6a506adf6a9?list=studio)
 
 ## Week 5 - Harmonic & NoiseWander
 ### Lecture
