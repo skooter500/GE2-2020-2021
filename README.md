@@ -35,11 +35,11 @@
 
 Checkout this video of what you will be making today using the finite state machine:
 
-In this video are the two autonomous agents we programmed in Friday's class with some enhancements and additional states:
+In this video are the two autonomous agents we programmed in Friday's class with some enhancements and additional states you can make today:
 
 [![YouTube](http://img.youtube.com/vi/R6yzjthBH4U/0.jpg)](https://www.youtube.com/watch?v=R6yzjthBH4U)
 
-The agent boid goes between Patrol state and Defend state. In Patrol state, the agent will follow it's path. In defend state, it will fire at the green agent until either it runs out of ammuntion or the green agent goes out of range. The green agent will go between it's Attack state, where it will fire at the blue agent or Flee state where it will flee from the attacking blue agent. 
+The blue agent goes between Patrol state and Defend state. In Patrol state, the agent will follow it's path. In defend state, it will fire at the green agent until either it runs out of ammuntion or the green agent goes out of range. The green agent will go between it's Attack state, where it will fire at the blue agent or Flee state where it will flee from the attacking blue agent. 
 
 If either agent runs out of ammunition it will go and get the nearest ammunition. These are tagged with "Ammo".
 
@@ -47,11 +47,17 @@ If either agent gets below 2 health, it will go and pickup the nearest health. T
 
 The spawning system keeps 5 health and 5 ammo in the scene at all times.
 
-If either boid gets to 0 or 1 health, it goes to the dead state. In dead state, the state machine gets turned off and all the steering behaviours get disabled.
+If either boid gets to 0 health, it goes to the dead state. In dead state, the state machine gets turned off and all the steering behaviours get disabled.
 
-The ammo, health and live and dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine)
+The GetAmmo, GetHealth and Alive and Dead behaviours are implemented using a global state called Alive and also state blips (RevertToPreviousState on the StateMachine).
 
-Update your forks of the repo from my master branch and make a branch for your work today. All the above is in a scene called StateMachines.
+Update your forks of the repo from my master branch and make a branch for your work today. All the above is in a scene called StateMachines. The states are in the file States.cs.
+
+To complete the lab:
+
+- Make a GetHealth and GetAmmo state with Enter, Think and Exit methods. When transitioning out of these states, use RevertToPrevious to implement a state blip
+- Make an Aive state that checks health and ammo levels and transitions to GetHealth, GetAmmo or Dead as appropriate
+- Modify Attach and Defend to remove ammo when shooting
 
 ## Week 6 - Finite State Machines
 
