@@ -71,7 +71,7 @@ Other things to try:
 
 In case you are curious, here is the video of Psytrance Music Visualiser:
 
-https://www.youtube.com/watch?v=KNymjRyr27A
+[![YouTube](http://img.youtube.com/vi/KNymjRyr27A/0.jpg)](https://www.youtube.com/watch?v=KNymjRyr27A)
 
 And here is a [blog post](https://bryanduggan.org/2021/03/04/psytrance-spiral-generator/) with some screenshots. It is one of the Entity Component System samples I am putting together for the course. It generates a great variety of beautiful spirals and can be beat tracked to the audio.
 
