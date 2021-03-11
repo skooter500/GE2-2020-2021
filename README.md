@@ -29,6 +29,11 @@
 - Week 13 - CA Submission & Demo - 50%
 
 ## Week 7
+## Lecture
+- [ECS Slides](https://drive.google.com/file/d/1nGoqxueagIqOwTWA7TZ7NpVYfKwhrIMV/view?usp=sharing)
+- [Video of Thursday's class](https://web.microsoftstream.com/video/6ab9cb85-3684-4bf9-a90b-2a7b2257a8f6?list=studio)
+
+## Lab
 ### Learning Outcomes
 - Learn how to use the state machine design pattern
 - Learn how to draw a FSM diagram
