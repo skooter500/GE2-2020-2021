@@ -94,7 +94,7 @@ You can [check out the repo](http://github.com/skooter500/ECS2020) in advance of
 - [Thursdays' class](https://web.microsoftstream.com/video/f89bdaae-26c9-4e39-9f36-0ec5f108faa5?list=studio)
 - [Friday's class](https://web.microsoftstream.com/video/4426c2dc-eb00-47bb-b869-e6a506adf6a9?list=studio)
 
-## Week 5 - Harmonic & NoiseWander
+## Week 5 - Harmonic & NoiseWander behaviours
 ### Lecture
 - [Video of the class on Thursday](https://web.microsoftstream.com/video/d27e6703-6350-4fa4-8345-532837de2cdb)
 - [Video of the class on Friday](https://web.microsoftstream.com/video/bb01cfa3-cdcb-4036-b30c-4db2c891a0e0)
@@ -115,6 +115,8 @@ A few ideas for todays lab!
 ### Lab
 
 - Try [this lab test from 2018](https://github.com/skooter500/GE2-Labtest1-2018) about Offset Pursue. No need to clone the repo as it has the solution in it! 
+
+[![YouTube](http://img.youtube.com/vi/bydalDzhCBY/0.jpg)](https://www.youtube.com/watch?v=bydalDzhCBY)
 
 ## Week 3
 
