@@ -387,8 +387,9 @@ GameObject:
   - component: {fileID: 1039729036}
   - component: {fileID: 1039729035}
   - component: {fileID: 1039729039}
-  - component: {fileID: 1039729034}
   - component: {fileID: 1039729040}
+  - component: {fileID: 1039729034}
+  - component: {fileID: 1039729041}
   m_Layer: 0
   m_Name: boid
   m_TagString: Untagged
@@ -405,18 +406,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039729033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fc79b938da3ef48959773e1a3ba59d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6a9eb9c9405b34abd369b317650f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  frequency: 0.3
+  frequency: 0.05
   radius: 10
   theta: 0
-  amplitude: 80
+  amplitude: 100
   distance: 10
-  axis: 1
+  axis: 0
 --- !u!65 &1039729035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -532,6 +533,27 @@ MonoBehaviour:
   - {fileID: 1213023830}
   bondDamping: 25
   angularBondDamping: 25
+--- !u!114 &1039729041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039729033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fc79b938da3ef48959773e1a3ba59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  frequency: 0.3
+  radius: 10
+  theta: 0
+  amplitude: 80
+  distance: 5
+  axis: 1
 --- !u!1 &1113860501
 GameObject:
   m_ObjectHideFlags: 0
