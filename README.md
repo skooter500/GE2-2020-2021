@@ -32,6 +32,7 @@
 ## Lecture
 - [ECS Slides](https://drive.google.com/file/d/1nGoqxueagIqOwTWA7TZ7NpVYfKwhrIMV/view?usp=sharing)
 - [Video of Thursday's class](https://web.microsoftstream.com/video/6ab9cb85-3684-4bf9-a90b-2a7b2257a8f6?list=studio)
+- [Video of Friday's class](https://web.microsoftstream.com/video/4128090f-b5db-482e-8794-9a702fb57aba?list=studio)
 - [ECS Examples](https://github.com/skooter500/ECS2020)
 
 ## Lab
