@@ -28,12 +28,35 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
+## Week 8
+## Lab
+Fork and clone the [ECS2020 repo](https://github.com/ECS2020). It has the code we worked on in Friday's class, with some improvements I made (we will talk about these on Thursday). The scene we worked on now looks like this:
+
+![Image](https://bryanduggandotorg.files.wordpress.com/2021/03/noise00001.png?w=895&h=&zoom=2)
+
+Currently, there are 10K entities being created and destroyed. This is a pretty inefficient way to generate a terrain from perlin noise! Much better would be to create a single Entity with a mesh and update the mesh vertices in a job. I started work on implementing this approach in the branch mesh_deformation. I got a script online that generates a plane mesh. It's in the scene MeshDeformation. I added some Perlin noise to the mesh just to test that it was being generated correctly. You can try and finish the job by creating a single entity that renders the mesh and writing a job and a system to update the vertices. This will involve some looking at code and googling stuff! Here is what I suggest you do:
+
+- Fork and clone the repo
+- Checkout the mesh_deformation branch
+- Create a new branch for your work called week8lab
+- Look at the code in NoiseCube, you will see an example of how to create entities and how to write a system
+- Create a system in the file meshController.cs and call it MeshDeformer
+- Create a component with no fields, an archetype and an entity
+- Create a NativeArray of type Vector3 to hold the mesh vertices
+- Write a a job that iterates over the NativeArray and updates the vertices
+- Every frame, copy the NativeArray of vertices back to the mesh
+
+Someone has done something similar with jobs, but not entities in [this repo](https://github.com/adcimon/unity-job-system-mesh-deformer), so might be worth having a look.
+
+
 ## Week 7
 ## Lecture
 - [ECS Slides](https://drive.google.com/file/d/1nGoqxueagIqOwTWA7TZ7NpVYfKwhrIMV/view?usp=sharing)
 - [Video of Thursday's class](https://web.microsoftstream.com/video/6ab9cb85-3684-4bf9-a90b-2a7b2257a8f6?list=studio)
 - [Video of Friday's class](https://web.microsoftstream.com/video/4128090f-b5db-482e-8794-9a702fb57aba?list=studio)
-- [ECS Examples](https://github.com/skooter500/ECS2020)
+- [My ECS repo](https://github.com/skooter500/ECS2020)
+- [Official ECS Samples](https://github.com/Unity-Technologies/EntityComponentSystemSamples)
+
 
 ## Lab
 ### Learning Outcomes
