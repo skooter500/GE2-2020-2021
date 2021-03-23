@@ -28,7 +28,16 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
-## Week 8
+## Week 9 - Entity Component System
+## Lab
+- [Cellular Automata in ECS Lecture](https://web.microsoftstream.com/video/4e9fb74b-e903-4180-ba2e-2d21bf94404f?list=studio)
+
+## Week 8 - Entity Component System
+
+## Lecture
+- [Thursday's class](https://web.microsoftstream.com/video/745bc27c-5628-440a-99b1-6cd677bdf9eb?list=studio)
+- No class on Friday due to power cut
+
 ## Lab
 Fork and clone the [ECS2020 repo](https://github.com/ECS2020). It has the code we worked on in Friday's class, with some improvements I made (we will talk about these on Thursday). The scene we worked on now looks like this:
 
@@ -49,7 +58,7 @@ Currently, there are 10K entities being created and destroyed. This is a pretty 
 Someone has done something similar with jobs, but not entities in [this repo](https://github.com/adcimon/unity-job-system-mesh-deformer), so might be worth having a look.
 
 
-## Week 7
+## Week 7 - Entity Component System
 ## Lecture
 - [ECS Slides](https://drive.google.com/file/d/1nGoqxueagIqOwTWA7TZ7NpVYfKwhrIMV/view?usp=sharing)
 - [Video of Thursday's class](https://web.microsoftstream.com/video/6ab9cb85-3684-4bf9-a90b-2a7b2257a8f6?list=studio)
