@@ -61,8 +61,8 @@ Exercise!
 [![YouTube](http://img.youtube.com/vi/KNymjRyr27A/0.jpg)](https://www.youtube.com/watch?v=KNymjRyr27A)
 
 ## Lecture
-- [Video of Thursday's Class]()
-- [Video of Friday's Class]()
+- [Video of Thursday's Class](https://web.microsoftstream.com/video/d962ebfb-8bd2-4ff5-bec9-c136c57c5e7b)
+- [Video of Friday's Class](https://web.microsoftstream.com/video/c889ecca-1c83-4ad0-9230-d76d0a438cd5)
 
 ## Lab
 - [Cellular Automata in ECS Lecture](https://web.microsoftstream.com/video/4e9fb74b-e903-4180-ba2e-2d21bf94404f?list=studio)
