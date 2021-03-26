@@ -58,7 +58,7 @@ Exercise!
 
 ## Week 9 - Entity Component System - Cellular Automata & Psytrance Spirals
 
-[![YouTube](http://img.youtube.com/vi/qmtxqCU1X5Q/0.jpg)](https://www.youtube.com/watch?v=qmtxqCU1X5Q)
+[![YouTube](http://img.youtube.com/vi/KNymjRyr27A/0.jpg)](https://www.youtube.com/watch?v=KNymjRyr27A)
 
 ## Lecture
 - [Video of Thursday's Class]()
