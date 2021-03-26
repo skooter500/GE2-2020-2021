@@ -29,6 +29,27 @@
 - Week 13 - CA Submission & Demo - 50%
 
 ## Week 9 - Entity Component System
+
+## Lecture
+- [Video of Thursday's Class]()
+- [Video of Friday's Class]()
+
+Exercise!
+
+- Check out Avoidance scene
+- How are the feelers calculated?
+- What direction do they point?
+- How many are there? Whys this number?
+- How does the behaviour handle holes in the colliders?
+- Does the speed of the boid matter?
+- What direction is the force generated?
+- WHat alternatives are there to this?
+- How does the behaviour avoid certain obstacles while ignoring others?
+- How often are the feelers calculated and why?
+- How does the behaviour take priority over other behaviours?
+- How would you improve the behaviour?
+- How does it improve on Craig Reynolds avoidance behaviours?
+
 ## Lab
 - [Cellular Automata in ECS Lecture](https://web.microsoftstream.com/video/4e9fb74b-e903-4180-ba2e-2d21bf94404f?list=studio)
 
