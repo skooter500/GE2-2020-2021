@@ -28,11 +28,15 @@
 - Week 11 - Lab Test - 20%
 - Week 13 - CA Submission & Demo - 50%
 
-## Week 9 - Entity Component System
+## Week 12 - Path Finding and A*
+- A* in C#
+- Navmesh
 
-## Lecture
-- [Video of Thursday's Class]()
-- [Video of Friday's Class]()
+## Week 11 - Flocking in ECS
+
+[![YouTube](http://img.youtube.com/vi/8J7rliGiKw0/0.jpg)](https://www.youtube.com/watch?v=8J7rliGiKw0)
+
+## Week 10 - Obstacle Avoidance
 
 Exercise!
 
@@ -50,10 +54,20 @@ Exercise!
 - How would you improve the behaviour?
 - How does it improve on Craig Reynolds avoidance behaviours?
 
+[![YouTube](http://img.youtube.com/vi/qmtxqCU1X5Q/0.jpg)](https://www.youtube.com/watch?v=qmtxqCU1X5Q)
+
+## Week 9 - Entity Component System - Cellular Automata & Psytrance Spirals
+
+https://www.youtube.com/watch?v=qmtxqCU1X5Q
+
+## Lecture
+- [Video of Thursday's Class]()
+- [Video of Friday's Class]()
+
 ## Lab
 - [Cellular Automata in ECS Lecture](https://web.microsoftstream.com/video/4e9fb74b-e903-4180-ba2e-2d21bf94404f?list=studio)
 
-## Week 8 - Entity Component System
+## Week 8 - Entity Component System - Voxel terrain * Cellular Automata in 2D & 3D
 
 ## Lecture
 - [Thursday's class](https://web.microsoftstream.com/video/745bc27c-5628-440a-99b1-6cd677bdf9eb?list=studio)
