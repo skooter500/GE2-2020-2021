@@ -22,11 +22,18 @@
 ## Previous years courses
 - [2019-2020](https://github.com/skooter500/GE2-2019-2020)
 - [2018-2019](https://github.com/skooter500/GE2-2018-2019)
+
+## Previous years lab tests
+- https://github.com/skooter500/GE2-Lab-Test-2019
+- https://github.com/skooter500/GE2-Lab-Test-2019-Solution
+- https://github.com/skooter500/GE2-LabTest2-2017
+- https://github.com/skooter500/GAILabTest12017
 	
 ## Assessment Schedule	
 - Week 6 - CA proposal & Git repo
 - Week 11 - Tuesday 27th April 9am Lab Test - 20%
 - Week 13 - Friday 7th May CA Submission - 50%
+- 17 May 2021 2pm-5pm - End of year online test
 
 ## Week 12 - Path Finding and A*
 - A* in C#
