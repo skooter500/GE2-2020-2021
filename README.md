@@ -47,17 +47,18 @@ Have a look at the PureECSScene in [this repo](http://github.com/skooter500/ECS2
 
 1. What are Entities, Components, Systems and Jobs?
 5. What is the purpose of the class BoidBootstrap?
-2. In the previous examples, we explored two approaches to creating Entities. Describe them. Which approach was used in the Boids Scene?
-3. How many systems are there running in this scene? What are they and what do they do?
-4. In the previous examples we looked at two different types of jobs? What were they and what were they for? 
+2. In the previous examples, we explored two approaches to creating Entities. Describe them. Which approach was used in the PureECSScene Scene?
+3. How many systems are there running in PureECSScene? What are they and what do they do?
+4. In the previous examples we looked at two different types of jobs. What were they and what were they for? 
 4. BoidSystem schedules IJobEntityBatch jobs. What are these and how does this approach differ from using Entities.ForEach? 
 4. How do these jobs selects Entities to iterate over? How are the Components on these Entities accessed? 
-6. What Native Containers does the BoidSystem create and what is their purpose?
+6. What is a Native Container? Give some examples. What Native Containers does the BoidSystem create and what is their purpose?
 7. What Jobs does the BoidSystem schedule and in what order. Is this order significant?
 8. PartitionSpaceJob uses an algorithm called Cell Space Partitioning. How can this algorithm reduce the computational complexity the Flocking?
 9. What is the limitation of this algorithm?
 9. How are Boids assigned cells?
 10. PartitionSpaceJob uses a NativeMultiHashMap. What is the purpose of this data structure? What is the computational complexity of retrieving a value from a key in this data structure?
+10. How do Boids access the positions and rtotations of other Boids?
 11. In CountNeighboursJob, how does the algorithm determine how many cells are surrounding a boid that it needs to check for neighbours?
 12. What is the design pattern for retrieving all the values that match a given key in a NativeMultiHashMapIterator?
 13. Where does the algorithm store the neighbours for each Boid?
@@ -75,10 +76,6 @@ Have a look at the PureECSScene in [this repo](http://github.com/skooter500/ECS2
 21. What Native Containers does this job create?
 22. In HeadAndtailsSystem, what controls the speed of the procedural animation?
 22. How does the Head Animation work? Draw a diagram. What Unity API call is this system similar to?
-
-
-
-
 
 [![YouTube](http://img.youtube.com/vi/8J7rliGiKw0/0.jpg)](https://www.youtube.com/watch?v=8J7rliGiKw0)
 
