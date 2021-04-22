@@ -40,6 +40,7 @@
 - Navmesh
 
 ## Week 11 - Flocking in ECS
+- [Video of Thursdays class](https://www.youtube.com/watch?v=0ByqDsfdblY)
 
 ## Lecture
 
