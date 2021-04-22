@@ -42,7 +42,29 @@
 ## Week 11 - Flocking in ECS
 - [Video of Thursdays class](https://www.youtube.com/watch?v=0ByqDsfdblY)
 
-## Lecture
+## Lectures
+
+Friday
+
+Exercise! 
+
+- Check out Avoidance scene
+- How are the feelers calculated?
+- What direction do they point?
+- How many are there? Whys this number?
+- How does the behaviour handle holes in the colliders?
+- Does the speed of the boid matter?
+- What direction is the force generated?
+- WHat alternatives are there to this?
+- How does the behaviour avoid certain obstacles while ignoring others?
+- How often are the feelers calculated and why?
+- How does the behaviour take priority over other behaviours?
+- How would you improve the behaviour?
+- How does it improve on Craig Reynolds avoidance behaviours?
+
+- [![YouTube](http://img.youtube.com/vi/qmtxqCU1X5Q/0.jpg)](https://www.youtube.com/watch?v=qmtxqCU1X5Q)
+
+Thursday
 
 Have a look at the PureECSScene in [this repo](http://github.com/skooter500/ECS2020) and answer the following questions:
 
@@ -80,25 +102,11 @@ Have a look at the PureECSScene in [this repo](http://github.com/skooter500/ECS2
 
 [![YouTube](http://img.youtube.com/vi/8J7rliGiKw0/0.jpg)](https://www.youtube.com/watch?v=8J7rliGiKw0)
 
-## Week 10 - Obstacle Avoidance
+## Week 10 - ECS Boids
 
-Exercise!
+- [Video of Thursday's class](https://web.microsoftstream.com/video/367c5760-bd8e-473e-b41b-7e42f5c5ff47?list=studio)
+- [Video of Friday's class](https://web.microsoftstream.com/video/725de1c7-8801-4658-bc23-715c4b9b9d67?list=studio)
 
-- Check out Avoidance scene
-- How are the feelers calculated?
-- What direction do they point?
-- How many are there? Whys this number?
-- How does the behaviour handle holes in the colliders?
-- Does the speed of the boid matter?
-- What direction is the force generated?
-- WHat alternatives are there to this?
-- How does the behaviour avoid certain obstacles while ignoring others?
-- How often are the feelers calculated and why?
-- How does the behaviour take priority over other behaviours?
-- How would you improve the behaviour?
-- How does it improve on Craig Reynolds avoidance behaviours?
-
-[![YouTube](http://img.youtube.com/vi/qmtxqCU1X5Q/0.jpg)](https://www.youtube.com/watch?v=qmtxqCU1X5Q)
 
 ## Week 9 - Entity Component System - Cellular Automata & Psytrance Spirals
 
