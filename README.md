@@ -42,7 +42,6 @@
 ## Week 11 - Flocking in ECS
 - [Video of Thursdays class](https://www.youtube.com/watch?v=0ByqDsfdblY)
 
-## Lectures
 
 Friday
 
@@ -106,7 +105,6 @@ Have a look at the PureECSScene in [this repo](http://github.com/skooter500/ECS2
 
 - [Video of Thursday's class](https://web.microsoftstream.com/video/367c5760-bd8e-473e-b41b-7e42f5c5ff47?list=studio)
 - [Video of Friday's class](https://web.microsoftstream.com/video/725de1c7-8801-4658-bc23-715c4b9b9d67?list=studio)
-
 
 ## Week 9 - Entity Component System - Cellular Automata & Psytrance Spirals
 
