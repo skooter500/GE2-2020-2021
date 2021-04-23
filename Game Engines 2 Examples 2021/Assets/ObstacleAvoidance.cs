@@ -56,6 +56,7 @@ public class ObstacleAvoidance : SteeringBehaviour
         }
     }
 
+    Vector3 lerpedForce = Vector3.zero;
     public override Vector3 Calculate()
     {
         force = Vector3.zero;
@@ -68,7 +69,8 @@ public class ObstacleAvoidance : SteeringBehaviour
                 force += CalculateSceneAvoidanceForce(info);
             }
         }
-        return force;
+        lerpedForce = Vector3.Lerp(lerpedForce,force, Time.deltaTime);
+        return lerpedForce;
     }
 
     void UpdateFeeler(int feelerNum, Quaternion localRotation, float baseDepth, FeelerInfo.FeeelerType feelerType)
