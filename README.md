@@ -31,7 +31,7 @@
 	
 ## Assessment Schedule	
 - Week 6 - CA proposal & Git repo
-- Week 11 - Tuesday 27th April 9am Lab Test - 20%
+- Week 12 - Tuesday 27th April 9am Lab Test - 20%
 - Week 13 - Friday 7th May CA Submission - 50%
 - 17 May 2021 2pm-5pm - End of year online test
 
