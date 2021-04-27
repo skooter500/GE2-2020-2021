@@ -18,9 +18,7 @@ public class PathFinder : MonoBehaviour
     //List<Node> openList = new List<Node>();
 
     Dictionary<Vector3, Node> closed = new Dictionary<Vector3, Node>(20000);
-    GameObject[] obstacles;
-    List<float> radii = new List<float>();
-    
+   
     Vector3 start, end;
 
     bool smooth = false;
@@ -130,6 +128,8 @@ public class PathFinder : MonoBehaviour
 
     private void addAdjacentNodes(Node current)
     {
+
+
 
         // Forwards
         Vector3 pos;
@@ -283,23 +283,9 @@ public class PathFinder : MonoBehaviour
 
     }
 
-    private bool IsNavigable(Vector3 pos)
-    {
-        for (int i = 0; i < obstacles.Count(); i ++)
-        {
-            GameObject o = obstacles[i];
-            if (Vector3.Distance(o.transform.position, pos) < radii[i])
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
     private void AddIfValid(Vector3 pos, Node parent)
     {
-
-        if ((IsNavigable(pos)))
+        if ((!RayTrace(parent.pos, pos)))
         {
             if (!closed.ContainsKey(pos))
             {
@@ -382,8 +368,11 @@ public class PathFinder : MonoBehaviour
         return (dist == 1) ? 10 : 14;
     }
 
-    private bool RayTrace(Vector3 point0, Vector3 point1)
+    public LayerMask obstaclesLayerMask;
+
+    bool RayTrace(Vector3 start, Vector3 end)
     {
-        
+        Vector3 toEnd = end - start;
+        return Physics.Raycast(start, toEnd, toEnd.magnitude, obstaclesLayerMask);
     }
 }
