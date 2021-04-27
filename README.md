@@ -39,6 +39,9 @@
 - A* in C#
 - Navmesh
 
+# Lab
+- [Link to the lab test](https://github.com/skooter500/GE2-Test-2021-Starter/)
+
 ## Week 11 - Flocking in ECS
 - [Video of Thursdays class](https://www.youtube.com/watch?v=0ByqDsfdblY)
 
