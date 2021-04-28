@@ -6,12 +6,9 @@ using UnityEngine;
     
 public class PathFinder : MonoBehaviour
 {
-    float voxelSize = 5.0f;
-    public string message = "";
-    
-
+    public float gridSize = 5.0f;
+    public string message = "";    
     public bool isThreeD = false;
-
 
     Dictionary<Vector3, Node> open = new Dictionary<Vector3, Node>(20000);
     //PriorityQueue<Node> openPQ = new PriorityQueue<Node>();
@@ -19,22 +16,23 @@ public class PathFinder : MonoBehaviour
 
     Dictionary<Vector3, Node> closed = new Dictionary<Vector3, Node>(20000);
    
-    Vector3 start, end;
+    Vector3 startPos, endPos;
 
-    bool smooth = false;
+    public Transform start, end;
 
-    public bool Smooth
+    public bool smooth = false;
+
+    public void Update()
     {
-        get { return smooth; }
-        set { smooth = value; }
+        FindPath(start.position, end.position);
     }
 
     Vector3 PositionToVoxel(Vector3 v)
     {
         Vector3 ret = new Vector3();
-        ret.x = ((int)(v.x / voxelSize)) * voxelSize;
-        ret.y = ((int)(v.y / voxelSize)) * voxelSize;
-        ret.z = ((int)(v.z / voxelSize)) * voxelSize;
+        ret.x = ((int)(v.x / gridSize)) * gridSize;
+        ret.y = ((int)(v.y / gridSize)) * gridSize;
+        ret.z = ((int)(v.z / gridSize)) * gridSize;
         return ret;
     }
 
@@ -42,17 +40,16 @@ public class PathFinder : MonoBehaviour
     {
         long oldNow = DateTime.Now.Ticks;
         bool found = false;
-        this.end = PositionToVoxel(start); // end refers to start
-        this.start = PositionToVoxel(end); // start refers to end
+        this.endPos = PositionToVoxel(start); // end refers to start
+        this.startPos = PositionToVoxel(end); // start refers to end
 
         open.Clear();
         closed.Clear();
 
         Node first = new Node();
         first.f = first.g = first.h = 0.0f;
-        first.pos = this.start;
-        open[this.start] = first;
-        //openList.Add(first);
+        first.pos = this.startPos;
+        open[this.startPos] = first;
         //openPQ.Enqueue(first);
 
         Node current = first;
@@ -85,25 +82,26 @@ public class PathFinder : MonoBehaviour
                 }
             }
             
-            if (current.pos.Equals(this.end))
+            if (current.pos.Equals(this.endPos))
             {
                 found = true;
                 break;
             }
             addAdjacentNodes(current);
             open.Remove(current.pos);
-            //openList.Remove(current);
             closed[current.pos] = current;
         }
         Path path = GetComponent<Path>();
         if (found)
         {
-            while (!current.pos.Equals(this.start))
+            path.waypoints.Clear();
+            while (!current.pos.Equals(this.startPos))
             {
                 path.waypoints.Add(current.pos);
                 current = current.parent;
             }
             path.waypoints.Add(current.pos);
+            path.waypoints.Add(this.end.position);
             message = "A * took: " + stopwatch.ElapsedMilliseconds + " milliseconds. Open list: " + maxSize;
 
         }
@@ -129,158 +127,21 @@ public class PathFinder : MonoBehaviour
     private void addAdjacentNodes(Node current)
     {
 
-
-
-        // Forwards
-        Vector3 pos;
-        pos.x = current.pos.x;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z + voxelSize;
-        AddIfValid(pos, current);
-
-        // Forwards right
-        pos.x = current.pos.x + voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z + voxelSize;
-        AddIfValid(pos, current);
-
-        // Right
-        pos.x = current.pos.x + voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z;
-        AddIfValid(pos, current);
-
-        // Backwards Right
-        pos.x = current.pos.x + voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z - voxelSize;
-        AddIfValid(pos, current);
-
-        // Backwards
-        pos.x = current.pos.x;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z - voxelSize;
-        AddIfValid(pos, current);
-
-        // Backwards Left
-        pos.x = current.pos.x - voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z - voxelSize;
-        AddIfValid(pos, current);
-
-        // Left
-        pos.x = current.pos.x - voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z;
-        AddIfValid(pos, current);
-
-        // Forwards Left
-        pos.x = current.pos.x - voxelSize;
-        pos.y = current.pos.y;
-        pos.z = current.pos.z + voxelSize;
-        AddIfValid(pos, current);
-
-        if (isThreeD)
+        for(int x = -1 ; x <= 1 ; x ++)
         {
-            // Above in front row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            
-            // Above middle row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            // Above back row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y + voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-
-            // Below in front row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z - voxelSize;
-            AddIfValid(pos, current);
-
-            // Below middle row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z;
-            AddIfValid(pos, current);
-
-            // Below back row
-            pos.x = current.pos.x - voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-
-            pos.x = current.pos.x + voxelSize;
-            pos.y = current.pos.y - voxelSize;
-            pos.z = current.pos.z + voxelSize;
-            AddIfValid(pos, current);
-                
-        }
-
+            int yrange = isThreeD ? 1 : 0;
+            for(int y = - yrange ; y <= yrange ; y ++)
+            {
+                for(int z = -1 ; z <= 1 ; z ++)
+                {
+                    if (! (x == 0 && y == 0 && z == 0))
+                    {
+                        Vector3 pos = current.pos + new Vector3(x * gridSize, y * gridSize, z * gridSize);
+                        AddIfValid(pos, current);
+                    }
+                }
+            }    
+        }        	        
     }
 
     private void AddIfValid(Vector3 pos, Node parent)
@@ -294,12 +155,11 @@ public class PathFinder : MonoBehaviour
                     Node node = new Node();
                     node.pos = pos;
                     node.g = parent.g + cost(node.pos, parent.pos);
-                    node.h = heuristic(pos, end);
+                    node.h = heuristic(pos, endPos);
                     node.f = node.g + node.h;
                     node.parent = parent;
                     //openPQ.Enqueue(node);
                     open[pos] = node;
-                    //openList.Add(node);
                 }
                 else
                 {
