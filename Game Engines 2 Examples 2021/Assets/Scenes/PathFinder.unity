@@ -1007,6 +1007,8 @@ MonoBehaviour:
   boid: {fileID: 0}
   path: {fileID: 1538709732}
   waypointDistance: 5
+  next: 0
+  looped: 1
 --- !u!1 &1113860501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382551197}
   m_LocalRotation: {x: 0.31706634, y: -0.4659293, z: 0.002028148, w: 0.82605976}
-  m_LocalPosition: {x: 14, y: 69.6, z: -104.9}
+  m_LocalPosition: {x: 14, y: 69.6, z: -284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1409,8 +1411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  next: 0
-  looped: 0
 --- !u!4 &1538709733
 Transform:
   m_ObjectHideFlags: 0

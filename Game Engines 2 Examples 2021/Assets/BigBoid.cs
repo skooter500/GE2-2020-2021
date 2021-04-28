@@ -98,6 +98,7 @@ public class BigBoid : MonoBehaviour
         return force;
     }
 
+    /*
     public Vector3 PathFollow()
     {
         Vector3 nextWaypoint = path.NextWaypoint();
@@ -114,6 +115,7 @@ public class BigBoid : MonoBehaviour
             return Seek(nextWaypoint);
         }
     }
+    */
 
     public Vector3 Seek(Vector3 target)
     {
@@ -155,10 +157,10 @@ public class BigBoid : MonoBehaviour
             f += Arrive(arriveTarget);
         }
 
-        if (pathFollowingEnabled)
+        /*if (pathFollowingEnabled)
         {
             f += PathFollow();
-        }
+        }*/
 
         if (playerSteeringEnabled)
         {
