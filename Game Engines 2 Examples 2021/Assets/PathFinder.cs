@@ -11,7 +11,7 @@ public class PathFinder : MonoBehaviour
     public bool isThreeD = false;
 
     Dictionary<Vector3, Node> open = new Dictionary<Vector3, Node>(20000);
-    //PriorityQueue<Node> openPQ = new PriorityQueue<Node>();
+    PriorityQueue<Node> openPQ = new PriorityQueue<Node>();
     //List<Node> openList = new List<Node>();
 
     Dictionary<Vector3, Node> closed = new Dictionary<Vector3, Node>(20000);
@@ -21,6 +21,8 @@ public class PathFinder : MonoBehaviour
     public Transform start, end;
 
     public bool smooth = false;
+
+    public bool usePQ = true;
 
     public void Update()
     {
@@ -45,12 +47,13 @@ public class PathFinder : MonoBehaviour
 
         open.Clear();
         closed.Clear();
+        openPQ.Clear();
 
         Node first = new Node();
         first.f = first.g = first.h = 0.0f;
         first.pos = this.startPos;
         open[this.startPos] = first;
-        //openPQ.Enqueue(first);
+        openPQ.Enqueue(first);
 
         Node current = first;
         System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
@@ -68,20 +71,24 @@ public class PathFinder : MonoBehaviour
             {
                 maxSize = open.Count;
             }
-            //current = openPQ.Dequeue();
-            //float min = current.f;
-            
-            // Get the top of the q
-            float min = float.MaxValue;
-            foreach (Node node in open.Values)
+
+            if (usePQ)
             {
-                if (node.f < min)
+                current = openPQ.Dequeue();
+            }
+            else
+            {            
+                // Get the top of the q
+                float min = float.MaxValue;
+                foreach (Node node in open.Values)
                 {
-                    current = node;
-                    min = node.f;
+                    if (node.f < min)
+                    {
+                        current = node;
+                        min = node.f;
+                    }
                 }
             }
-            
             if (current.pos.Equals(this.endPos))
             {
                 found = true;
@@ -158,7 +165,10 @@ public class PathFinder : MonoBehaviour
                     node.h = heuristic(pos, endPos);
                     node.f = node.g + node.h;
                     node.parent = parent;
-                    //openPQ.Enqueue(node);
+                    if (usePQ)
+                    {
+                        openPQ.Enqueue(node);
+                    }
                     open[pos] = node;
                 }
                 else

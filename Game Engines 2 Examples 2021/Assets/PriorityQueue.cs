@@ -9,6 +9,11 @@ public class PriorityQueue<T> where T : IComparable<T>
 {
     private List<T> data;
 
+    public void Clear()
+    {
+        data.Clear();
+    }
+
     public PriorityQueue()
     {
         this.data = new List<T>();
