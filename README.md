@@ -39,6 +39,9 @@
 - A* in C#
 - Navmesh
 
+# Lecture
+- [Read my paper about the A* algorithm](docs/An_Optimised_Implementation_of_the_A_Algorithm_usi.pdf)
+
 # Lab
 - [Link to the lab test](https://github.com/skooter500/GE2-Test-2021-Starter/)
 
