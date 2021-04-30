@@ -23,6 +23,14 @@ public class PathFinder : MonoBehaviour
 
     public bool usePQ = true;
 
+    public void OnDrawGizmos()
+    {
+        if (! Application.isPlaying)
+        {
+            FindPath(start.position, end.position);    
+        }
+    }
+
     public void Start()
     {
         FindPath(start.position, end.position);
@@ -101,13 +109,14 @@ public class PathFinder : MonoBehaviour
         if (found)
         {
             path.waypoints.Clear();
+            path.waypoints.Add(this.start.position);
             while (!current.pos.Equals(this.startPos))
             {
                 path.waypoints.Add(current.pos);
                 current = current.parent;
             }
             path.waypoints.Add(current.pos);
-            path.waypoints.Add(this.end.position);
+            path.waypoints.Add(this.end.position); 
             message = "A * took: " + stopwatch.ElapsedMilliseconds + " milliseconds. Open list: " + maxSize;
 
         }

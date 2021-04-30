@@ -32,7 +32,7 @@
 ## Assessment Schedule	
 - Week 6 - CA proposal & Git repo
 - Week 12 - Tuesday 27th April 9am Lab Test - 20%
-- Week 13 - Friday 7th May CA Submission - 50%
+- Week 13 - Friday 7th May CA Submission - 50% - [Submit Assignments here](https://docs.google.com/forms/d/e/1FAIpQLSdlxuAN12yu7wjktdZCghtrj0kzTlSg1EbRI_iQwdFPD6tO9A/viewform)
 - 17 May 2021 2pm-5pm - End of year online test
 
 ## Week 12 - Path Finding and A*
@@ -41,6 +41,10 @@
 
 # Lecture
 - [Read my paper about the A* algorithm](docs/An_Optimised_Implementation_of_the_A_Algorithm_usi.pdf)
+- [Video of Thursday's class](https://youtu.be/04tLCyh3IvI)
+- [Video of Friday's class - Part 1 about the exam](https://web.microsoftstream.com/video/bf11d615-cf1e-4b67-8d81-7b7a3372e08b)
+- [Video of Friday's class - Part 2 - A*](https://github.com/skooter500/GE2-2020-2021)
+- [Nav Mesh in Unity](https://www.youtube.com/watch?v=CHV1ymlw-P8)
 
 # Lab
 - [Link to the lab test](https://github.com/skooter500/GE2-Test-2021-Starter/)
