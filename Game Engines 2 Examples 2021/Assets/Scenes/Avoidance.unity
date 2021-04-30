@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfb212cb81a6894d81ed0e6816fc852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 5
+  weight: 2
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   scale: 4

@@ -6,13 +6,12 @@ using UnityEngine;
     
 public class PathFinder : MonoBehaviour
 {
-    public float gridSize = 5.0f;
+    public float gridSize = 5.0f; 
     public string message = "";    
     public bool isThreeD = false;
 
     Dictionary<Vector3, Node> open = new Dictionary<Vector3, Node>(20000);
     PriorityQueue<Node> openPQ = new PriorityQueue<Node>();
-    //List<Node> openList = new List<Node>();
 
     Dictionary<Vector3, Node> closed = new Dictionary<Vector3, Node>(20000);
    
@@ -24,7 +23,7 @@ public class PathFinder : MonoBehaviour
 
     public bool usePQ = true;
 
-    public void Update()
+    public void Start()
     {
         FindPath(start.position, end.position);
     }
