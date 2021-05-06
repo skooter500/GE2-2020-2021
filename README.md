@@ -43,7 +43,7 @@
 - [Read my paper about the A* algorithm](docs/An_Optimised_Implementation_of_the_A_Algorithm_usi.pdf)
 - [Video of Thursday's class](https://youtu.be/04tLCyh3IvI)
 - [Video of Friday's class - Part 1 about the exam](https://web.microsoftstream.com/video/bf11d615-cf1e-4b67-8d81-7b7a3372e08b)
-- [Video of Friday's class - Part 2 - A*](https://github.com/skooter500/GE2-2020-2021)
+- [Video of Friday's class - Part 2 - A*](https://www.youtube.com/watch?v=ji-8JwK5HZA)
 - [Nav Mesh in Unity](https://www.youtube.com/watch?v=CHV1ymlw-P8)
 
 # Lab
