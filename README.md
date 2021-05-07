@@ -32,7 +32,7 @@
 ## Assessment Schedule	
 - Week 6 - CA proposal & Git repo
 - Week 12 - Tuesday 27th April 9am Lab Test - 20%
-- Week 13 - Friday 7th May CA Submission - 50% - [Submit Assignments here](https://docs.google.com/forms/d/e/1FAIpQLSdlxuAN12yu7wjktdZCghtrj0kzTlSg1EbRI_iQwdFPD6tO9A/viewform)
+- Monday 10th May CA Submission - 50% - [Submit Assignments here](https://docs.google.com/forms/d/e/1FAIpQLSdlxuAN12yu7wjktdZCghtrj0kzTlSg1EbRI_iQwdFPD6tO9A/viewform)
 - 17 May 2021 2pm-5pm - End of year online test
 
 ## Week 12 - Path Finding and A*
